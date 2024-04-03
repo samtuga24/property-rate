@@ -1,0 +1,14 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.app.id
+productName: PROPERTY RATE
+files:
+  - filter:
+      - build/**/*
+      - electron/main.ts
+      - package.json
+extends: null
+mac:
+  type: distribution
+electronVersion: 29.1.6
