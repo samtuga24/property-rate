@@ -34,9 +34,12 @@ export const AddProperty = () => {
         form.rate = 0.000222
     } else if (form.category == 'R3') {
         form.rate = 0.000201
-    } else if (form.category == 'H1') {
+    } else if (form.category == 'HI') {
         form.rate = 0.023333
-    } else if (form.category == 'MX') {
+    } else if (form.category == 'LI') {
+        form.rate = 0.002071
+    } 
+    else if (form.category == 'MX') {
         form.rate = 0.002133
     }else{
         form.rate = 0.00
@@ -66,7 +69,8 @@ export const AddProperty = () => {
                     <option value="R1">R1</option>
                     <option value="R2">R2</option>
                     <option value="R3">R3</option>
-                    <option value="H1">H1</option>
+                    <option value="HI">HI</option>
+                    <option value="LI">LI</option>
                     <option value="MX">Mx</option>
                 </select>
                 <div className='text-input'><input type="text" name='rateableValue' value={form.rateableValue} onChange={onUpdateForm} placeholder='Rateable Value' /></div>
