@@ -11,7 +11,8 @@ export const AddCompany = () => {
     phone: "",
     arrears: "",
     type: "",
-    alias: ""
+    alias: "",
+    owner: ""
   })
 
   const onUpdateForm = e => {
@@ -44,7 +45,8 @@ export const AddCompany = () => {
       phone: "",
       arrears: "",
       type: "",
-      alias: ""
+      alias: "",
+      owner: ""
     })
 
   }
@@ -65,6 +67,7 @@ export const AddCompany = () => {
       {organization &&
         <div className='add-company-wrapper'>
           <div className='text-input'><input type="text" name='name' value={form.name} onChange={onUpdateForm} placeholder='Company Name' /></div>
+          <div className='text-input'><input type="text" name='owner' value={form.owner} onChange={onUpdateForm} placeholder='Owners Name' /></div>
           <div className='text-input'><input type="text" name='tin' value={form.tin} onChange={onUpdateForm} placeholder='TIN' /></div>
           <div className='text-input'><input type="text" name='phone' value={form.phone} onChange={onUpdateForm} placeholder='Phone' /></div>
           <div className='text-input'><input type="text" name='arrears' value={form.arrears} onChange={onUpdateForm} placeholder='Arrears' /></div>

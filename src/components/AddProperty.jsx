@@ -20,8 +20,8 @@ export const AddProperty = () => {
     }
 
 
-    // console.log(form)
-    // console.log(company)
+    console.log(form)
+    console.log(company)
     if (form.category == 'C1') {
         form.rate = 0.003301
     } else if (form.category == 'C2') {
@@ -54,6 +54,8 @@ export const AddProperty = () => {
             })
             .catch((error) => console.log(error))
     }
+
+    console.log(result)
 
     return (
         <div className='add-company-container'>

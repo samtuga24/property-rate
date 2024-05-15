@@ -139,8 +139,21 @@ input{
 .print-wrapper{
   margin-top: 5vh;
 }
+.reference-wrap{
+ border-bottom: 2px solid black;
+ margin-bottom: 0.5vh;
+ height: fit-content;
+}
+.your-ref{
+  margin-top: 1vh;
+}
+.reference{
+  font-size: 1.2vw;
+  padding-top: 2vh;
+}
 .print-header{
-  display: flex;
+  /* display: flex; */
+  border-bottom: 2px solid black;
 }
 .coat-wrapper{
   width: 20%;
@@ -152,6 +165,10 @@ input{
 
 .header-wrapper{
   width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
 }
 
 .phma-wrapper{
@@ -161,16 +178,27 @@ input{
 }
 .phma-wrapper img{
   width: 50%;
+  margin-top: -1.8vh;
+}
+.logo-header{
+  display: flex;
 }
 .bill-header{
   font-size: 3vw;
-  letter-spacing: 0.3vw;
+  letter-spacing: 0.2vw;
   font-weight: 500;
 }
-.bill-header-1{
-  letter-spacing: 0.3vw;
+.header-contact{
   font-weight: 500;
-  font-size: 1.3vw;
+  font-size: 1.35svw;
+  margin-top: 2vh;
+  color: gray;
+  margin-left: 5vw;
+}
+.bill-header-1{
+  /* letter-spacing: 0.3vw; */
+  font-weight: 500;
+  font-size: 1.5vw;
   margin-top: 2vh;
   color: gray;
 }
@@ -178,11 +206,30 @@ input{
 .print-details{
   margin-top: 2vh;
 }
+.attn{
+  font-size: 1.2vw;
+}
+.law-section{
+  font-size: 1.3vw;
+  margin-top: 1vh;
+}
+.rate-header{
+  font-size: 1.2vw;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.row-detail{
+  height: 5.5vh;
+  display: flex;
+}
 
 .detail-label{
   font-size: 1.2vw;
   font-weight: 700;
   margin-bottom: 1vh;
+  width: 15vw;
 }
 .detail{
   margin-bottom: 3vh;
@@ -266,15 +313,37 @@ table,th,td{
   .bill-time{
     height: 5vh;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
+    margin-top: -2vh;
     justify-content: end;
     font-size: 1.2vw;
     font-weight: 600;
+    height: fit-content;
+  }
+  p{
+    font-size: 1.2vw;
+  }
+  .bank-details{
+
   }
   @media print {
     @page{
       margin: 0 !important;
 
+    }
+    p{
+      font-size: 2.1vw;
+    }
+    .row-detail{
+      height: 3vh;
+    }
+    
+    .rate-header{
+      font-size: 2.2vw;
+    }
+
+    .law-section{
+      font-size: 2.2vw;
     }
     .bill-header-1{
       margin-top: 0vh;
@@ -286,15 +355,19 @@ table,th,td{
     
     .phma-wrapper img{
       width: 90%;
-      margin-top: -0.5vh;
+      margin-top: -0.8vh;
     }
     .header-wrapper{
       padding-left: 5vw;
     }
     .bill-header{
-      font-size: 5vw;
+      font-size: 3.7vw;
     }
     .bill-header-1{
+      font-size: 2.5vw;
+    }
+
+    .header-contact{
       font-size: 2.5vw;
     }
 
@@ -316,6 +389,7 @@ table,th,td{
       font-size: 2vw;
       font-weight: 700;
       margin-bottom: 0.5vh;
+      width: 20vw;
     }
     .detail{
       margin-bottom: 2vh;
@@ -323,9 +397,13 @@ table,th,td{
       font-size: 2.2vw;
       color: rgb(66, 66, 66);
     }
+    .reference{
+      font-size: 2vw;
+    }
 
     .bill-time{
       font-size: 2.2vw;
+      margin-top: 0vh;
     }
     .print-wrapper{
       padding-left: 2vw;
