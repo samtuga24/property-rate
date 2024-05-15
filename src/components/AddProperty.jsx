@@ -48,6 +48,9 @@ export const AddProperty = () => {
     let r2;
     let r3;
     let r4;
+    let hi;
+    let li;
+    let mx;
 
     if(form.category == 'C1' && form.rateableValue * form.rate < 300){
         c1 = 300
@@ -91,6 +94,24 @@ export const AddProperty = () => {
         r4 = form.rateableValue * form.rate
     }
 
+    if(form.category == 'HI' && form.rateableValue * form.rate < 2000){
+        hi = 2000
+    }else{
+        hi = form.rateableValue * form.rate
+    }
+
+    if(form.category == 'LI' && form.rateableValue * form.rate < 1000){
+        li = 1000
+    }else{
+        li = form.rateableValue * form.rate
+    }
+
+    if(form.category == 'MX' && form.rateableValue * form.rate < 200){
+        mx = 200
+    }else{
+        mx = form.rateableValue * form.rate
+    }
+
     const submit = () => {
         console.log(form)
         axios.post(`http://localhost:8080/update-property/${company}`, form)
@@ -130,6 +151,9 @@ export const AddProperty = () => {
                 {form.category == "R2" && <div className='text-input'><input type="text" value={r2} placeholder='Bill Amount' /></div>}
                 {form.category == "R3" && <div className='text-input'><input type="text" value={r3} placeholder='Bill Amount' /></div>}
                 {form.category == "R4" && <div className='text-input'><input type="text" value={r4} placeholder='Bill Amount' /></div>}
+                {form.category == "LI" && <div className='text-input'><input type="text" value={li} placeholder='Bill Amount' /></div>}
+                {form.category == "HI" && <div className='text-input'><input type="text" value={hi} placeholder='Bill Amount' /></div>}
+                {form.category == "MX" && <div className='text-input'><input type="text" value={mx} placeholder='Bill Amount' /></div>}
                 <div className='add-button' onClick={submit}>Add Property</div>
             </div>
         </div>
