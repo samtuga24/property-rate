@@ -68,7 +68,7 @@ export const AddCompany = () => {
         <div className='add-company-wrapper'>
           <div className='text-input'><input type="text" name='name' value={form.name} onChange={onUpdateForm} placeholder='Company Name' /></div>
           <div className='text-input'><input type="text" name='owner' value={form.owner} onChange={onUpdateForm} placeholder='Owners Name' /></div>
-          <div className='text-input'><input type="text" name='tin' value={form.tin} onChange={onUpdateForm} placeholder='TIN' /></div>
+          <div className='text-input'><input type="text" name='tin' value={form.tin} onChange={onUpdateForm} placeholder='Valuation Number' /></div>
           <div className='text-input'><input type="text" name='phone' value={form.phone} onChange={onUpdateForm} placeholder='Phone' /></div>
           <div className='text-input'><input type="text" name='arrears' value={form.arrears} onChange={onUpdateForm} placeholder='Arrears' /></div>
           <div className='add-button' onClick={submit}>Add Organization</div>
@@ -78,7 +78,7 @@ export const AddCompany = () => {
       {individual &&
         <div className='add-company-wrapper'>
           <div className='text-input'><input type="text" name='name' value={form.name} onChange={onUpdateForm} placeholder='Full Name' /></div>
-          <div className='text-input'><input type="text" name='tin' value={form.tin} onChange={onUpdateForm} placeholder='Ghana Card Number' /></div>
+          <div className='text-input'><input type="text" name='tin' value={form.tin} onChange={onUpdateForm} placeholder='Valuation Number' /></div>
           <div className='text-input'><input type="text" name='phone' value={form.phone} onChange={onUpdateForm} placeholder='Phone' /></div>
           <div className='text-input'><input type="text" name='arrears' value={form.arrears} onChange={onUpdateForm} placeholder='Arrears' /></div>
           <div className='text-input'><input type="text" name='alias' value={form.alias} onChange={onUpdateForm} placeholder='Alias' /></div>

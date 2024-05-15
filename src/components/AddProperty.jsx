@@ -61,7 +61,7 @@ export const AddProperty = () => {
         <div className='add-company-container'>
             <div className='add-company-wrapper'>
                 <div className='result'>{result}</div>
-                <div className='text-input'><input type="text" name='company' value={company} onChange={(e) => setCompany(e.target.value)} placeholder='TIN' /></div>
+                <div className='text-input'><input type="text" name='company' value={company} onChange={(e) => setCompany(e.target.value)} placeholder='Valuation' /></div>
                 <div className='text-input'><input type="text" name='propertyId' value={form.propertyId} onChange={onUpdateForm} placeholder='Property ID' /></div>
                 <select name="category" value={form.category} onChange={onUpdateForm} id="" className='category-select'>
                     <option value="" disabled={true}>Category</option>
