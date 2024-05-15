@@ -62,7 +62,7 @@ export const AddProperty = () => {
     }
 
     if(form.category == 'C3' && form.rateableValue * form.rate < 200){
-        c3 = 300
+        c3 = 200
     }else{
         c3 = form.rateableValue * form.rate
     }
