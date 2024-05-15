@@ -19,9 +19,6 @@ export const AddProperty = () => {
         submitForm(newFormState)
     }
 
-
-    console.log(form)
-    console.log(company)
     if (form.category == 'C1') {
         form.rate = 0.003301
     } else if (form.category == 'C2') {
@@ -43,6 +40,55 @@ export const AddProperty = () => {
         form.rate = 0.002133
     }else{
         form.rate = 0.00
+    }
+    let c1;
+    let c2;
+    let c3;
+    let r1;
+    let r2;
+    let r3;
+    let r4;
+
+    if(form.category == 'C1' && form.rateableValue * form.rate < 300){
+        c1 = 300
+    }else{
+        c1 = form.rateableValue * form.rate
+    }
+
+    if(form.category == 'C2' && form.rateableValue * form.rate < 250){
+        c2 = 250
+    }else{
+        c2 = form.rateableValue * form.rate
+    }
+
+    if(form.category == 'C3' && form.rateableValue * form.rate < 200){
+        c3 = 300
+    }else{
+        c3 = form.rateableValue * form.rate
+    }
+
+    if(form.category == 'R1' && form.rateableValue * form.rate < 150){
+        r1 = 300
+    }else{
+        r1 = form.rateableValue * form.rate
+    }
+
+    if(form.category == 'R2' && form.rateableValue * form.rate < 100){
+        r2 = 100
+    }else{
+        r2 = form.rateableValue * form.rate
+    }
+
+    if(form.category == 'R3' && form.rateableValue * form.rate < 50){
+        r3 = 50
+    }else{
+        r3 = form.rateableValue * form.rate
+    }
+
+    if(form.category == 'R4' && form.rateableValue * form.rate < 20){
+        r4 = 20
+    }else{
+        r4 = form.rateableValue * form.rate
     }
 
     const submit = () => {
@@ -77,7 +123,13 @@ export const AddProperty = () => {
                 </select>
                 <div className='text-input'><input type="text" name='rateableValue' value={form.rateableValue} onChange={onUpdateForm} placeholder='Rateable Value' /></div>
                 <div className='text-input'><input type="text" name='rate' value={form.rate} onChange={onUpdateForm} placeholder='Rate' /></div>
-                <div className='text-input'><input type="text" value={form.rateableValue * form.rate} placeholder='Bill Amount' /></div>
+                {form.category == "C1" && <div className='text-input'><input type="text" value={c1} placeholder='Bill Amount' /></div>}
+                {form.category == "C2" && <div className='text-input'><input type="text" value={c2} placeholder='Bill Amount' /></div>}
+                {form.category == "C3" && <div className='text-input'><input type="text" value={c3} placeholder='Bill Amount' /></div>}
+                {form.category == "R1" && <div className='text-input'><input type="text" value={r1} placeholder='Bill Amount' /></div>}
+                {form.category == "R2" && <div className='text-input'><input type="text" value={r2} placeholder='Bill Amount' /></div>}
+                {form.category == "R3" && <div className='text-input'><input type="text" value={r3} placeholder='Bill Amount' /></div>}
+                {form.category == "R4" && <div className='text-input'><input type="text" value={r4} placeholder='Bill Amount' /></div>}
                 <div className='add-button' onClick={submit}>Add Property</div>
             </div>
         </div>
