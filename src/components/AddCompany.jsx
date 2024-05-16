@@ -9,7 +9,6 @@ export const AddCompany = () => {
     name: "",
     tin: "",
     phone: "",
-    arrears: "",
     type: "",
     alias: "",
     owner: ""
