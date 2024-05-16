@@ -43,7 +43,6 @@ export const AddCompany = () => {
       name: "",
       tin: "",
       phone: "",
-      arrears: "",
       type: "",
       alias: "",
       owner: ""
@@ -70,7 +69,7 @@ export const AddCompany = () => {
           <div className='text-input'><input type="text" name='owner' value={form.owner} onChange={onUpdateForm} placeholder='Owners Name' /></div>
           <div className='text-input'><input type="text" name='tin' value={form.tin} onChange={onUpdateForm} placeholder='Valuation Number' /></div>
           <div className='text-input'><input type="text" name='phone' value={form.phone} onChange={onUpdateForm} placeholder='Phone' /></div>
-          <div className='text-input'><input type="text" name='arrears' value={form.arrears} onChange={onUpdateForm} placeholder='Arrears' /></div>
+          {/* <div className='text-input'><input type="text" name='arrears' value={form.arrears} onChange={onUpdateForm} placeholder='Arrears' /></div> */}
           <div className='add-button' onClick={submit}>Add Organization</div>
         </div>
       }
@@ -80,7 +79,7 @@ export const AddCompany = () => {
           <div className='text-input'><input type="text" name='name' value={form.name} onChange={onUpdateForm} placeholder='Full Name' /></div>
           <div className='text-input'><input type="text" name='tin' value={form.tin} onChange={onUpdateForm} placeholder='Valuation Number' /></div>
           <div className='text-input'><input type="text" name='phone' value={form.phone} onChange={onUpdateForm} placeholder='Phone' /></div>
-          <div className='text-input'><input type="text" name='arrears' value={form.arrears} onChange={onUpdateForm} placeholder='Arrears' /></div>
+          {/* <div className='text-input'><input type="text" name='arrears' value={form.arrears} onChange={onUpdateForm} placeholder='Arrears' /></div> */}
           <div className='text-input'><input type="text" name='alias' value={form.alias} onChange={onUpdateForm} placeholder='Alias' /></div>
 
           <div className='add-button' onClick={submit}>Add Individual</div>

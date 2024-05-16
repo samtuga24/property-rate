@@ -9,6 +9,7 @@ export const AddProperty = () => {
         category: "",
         rateableValue: "",
         rate: "",
+        arrears_rate: ""
     })
 
     const onUpdateForm = e => {
@@ -21,23 +22,32 @@ export const AddProperty = () => {
 
     if (form.category == 'C1') {
         form.rate = 0.003301
+        form.arrears_rate = 0.002913
     } else if (form.category == 'C2') {
         form.rate = 0.003112
+        form.arrears_rate = 0.002218
     } else if (form.category == 'C3') {
-        form.rate = 0.001908
+        form.rate = 0.002908
+        form.arrears_rate = 0.002201
     } else if (form.category == 'R1') {
         form.rate = 0.000255
+        form.arrears_rate = 0.000255
     } else if (form.category == 'R2') {
         form.rate = 0.000222
+        form.arrears_rate = 0.000222
     } else if (form.category == 'R3') {
         form.rate = 0.000201
+        form.arrears_rate = 0.000201
     } else if (form.category == 'HI') {
         form.rate = 0.023333
+        form.arrears_rate = 0.023333
     } else if (form.category == 'LI') {
         form.rate = 0.002071
+        form.arrears_rate = 0.002017
     } 
     else if (form.category == 'MX') {
         form.rate = 0.002133
+        form.arrears_rate = 0.002133
     }else{
         form.rate = 0.00
     }
@@ -144,6 +154,7 @@ export const AddProperty = () => {
                 </select>
                 <div className='text-input'><input type="text" name='rateableValue' value={form.rateableValue} onChange={onUpdateForm} placeholder='Rateable Value' /></div>
                 <div className='text-input'><input type="text" name='rate' value={form.rate} onChange={onUpdateForm} placeholder='Rate' /></div>
+                <div className='text-input'><input type="text" name='arrears' value={form.arrears_rate * form.rateableValue} onChange={onUpdateForm} placeholder='Arrears' /></div>
                 {form.category == "C1" && <div className='text-input'><input type="text" value={c1} placeholder='Bill Amount' /></div>}
                 {form.category == "C2" && <div className='text-input'><input type="text" value={c2} placeholder='Bill Amount' /></div>}
                 {form.category == "C3" && <div className='text-input'><input type="text" value={c3} placeholder='Bill Amount' /></div>}

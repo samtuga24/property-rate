@@ -28,13 +28,14 @@ export const Bill = () => {
         axios.get(`http://localhost:8080/get-property/${tin}`)
             .then(response => {
                 console.log(response.data[0])
+                console.log(response.data[0].arrears)
                 console.log(response.data[0].company)
                 console.log(response.data[0].company.id)
                 setComp(response.data[0].company.id)
                 setCompany(response.data[0].company.name)
                 setOwner(response.data[0].company.owner)
                 setPhone(response.data[0].company.phone)
-                setArrears(response.data[0].company.arrears)
+                setArrears(response.data[0].arrears)
                 setAlias(response.data[0].company.alias)
                 setAliasLength(response.data[0].company.alias.length)
                 setType(response.data[0].company.type)
@@ -136,7 +137,7 @@ export const Bill = () => {
                                 </div>
                                 <div className='row-detail'>
                                     <div className='detail-label'>Arrears</div>
-                                    <div className='detail'>GHS {arrears}</div>
+                                    <div className='detail'>GHS {Math.round(arrears *100)/100}</div>
                                 </div>
 
                                 <div className='row-detail'>
