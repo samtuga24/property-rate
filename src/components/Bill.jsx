@@ -28,14 +28,12 @@ export const Bill = () => {
         axios.get(`http://localhost:8080/get-property/${tin}`)
             .then(response => {
                 console.log(response.data[0])
-                console.log(response.data[0].arrears)
                 console.log(response.data[0].company)
                 console.log(response.data[0].company.id)
                 setComp(response.data[0].company.id)
                 setCompany(response.data[0].company.name)
                 setOwner(response.data[0].company.owner)
                 setPhone(response.data[0].company.phone)
-                setArrears(response.data[0].arrears)
                 setAlias(response.data[0].company.alias)
                 setAliasLength(response.data[0].company.alias.length)
                 setType(response.data[0].company.type)
@@ -48,6 +46,9 @@ export const Bill = () => {
         .then(response => { setTotal(response.data.reduce((num1, num2) => num1 + num2, 0)) })
         .catch((error) => console.log(error))
 
+        axios.get(`http://localhost:8080/get-arrears/${comp}`)
+        .then(response => { setArrears(response.data.reduce((num1, num2) => num1 + num2, 0)) })
+        .catch((error) => console.log(error))
 
     axios.get(`http://localhost:8080/list-property/${comp}`)
 
