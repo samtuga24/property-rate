@@ -33,7 +33,7 @@ export const Bill = () => {
                 setComp(response.data[0].company.id)
                 setCompany(response.data[0].company.name)
                 setOwner(response.data[0].company.owner)
-                setPhone(response.data[0].company.rateableValue)
+                setPhone(response.data[0].rateableValue)
                 setAlias(response.data[0].company.alias)
                 setAliasLength(response.data[0].company.alias.length)
                 setType(response.data[0].company.type)
@@ -57,7 +57,7 @@ export const Bill = () => {
     },[comp])
 
 
-
+console.log(phone)
 
     const currentDate = new Date().toString().slice(0, 15);
     console.log(`http://localhost:8080/list-property/${comp}`)
