@@ -362,6 +362,7 @@ table,th,td{
     }
     .bill-header{
       font-size: 3.7vw;
+      margin-top: -3vh;
     }
     .bill-header-1{
       font-size: 2.5vw;
@@ -418,6 +419,8 @@ table,th,td{
       .d-table{
         font-size: 2vw;
       }
+
+      
   }
 
   .director-container{
