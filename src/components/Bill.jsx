@@ -221,9 +221,10 @@ console.log(phone)
                             </div>
                             <div className='director-container'>
                                 <div className='director-wrapper'>
-                                    <div className='director-name'>Mr. Emmanuel Gyan</div>
+                                    <div className='director-name'>EMMANUEL GYAN</div>
                                     <div className='director-sign'><img src={sign} alt="" /></div>
-                                    <div className='director-position'>Municipal Coordinating Director</div>
+                                    <div className='director-position'>(MUNICIPAL CO-ORD DIRECTOR)</div>
+                                    <div className='director-position'><i>for:</i>MUNICIPAL CHIEF EXECUTIVE</div>
                                 </div>
                             </div>
                             <i>***</i>
