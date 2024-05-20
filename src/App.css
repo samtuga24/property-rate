@@ -333,6 +333,9 @@ table,th,td{
     p{
       font-size: 2.1vw;
     }
+    .attn{
+      font-size: 1.8vw;
+    }
     .row-detail{
       height: 3vh;
     }
