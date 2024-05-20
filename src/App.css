@@ -329,7 +329,6 @@ table,th,td{
   @media print {
     @page{
       margin: 0 !important;
-
     }
     p{
       font-size: 2.1vw;
@@ -339,11 +338,11 @@ table,th,td{
     }
     
     .rate-header{
-      font-size: 2.2vw;
+      font-size: 1.8vw;
     }
 
     .law-section{
-      font-size: 2.2vw;
+      font-size: 1.8vw;
     }
     .bill-header-1{
       margin-top: 0vh;
@@ -361,20 +360,20 @@ table,th,td{
       padding-left: 5vw;
     }
     .bill-header{
-      font-size: 3.7vw;
+      font-size: 3.4vw;
       margin-top: -3vh;
     }
     .bill-header-1{
-      font-size: 2.5vw;
+      font-size: 2.3vw;
     }
 
     .header-contact{
-      font-size: 2.5vw;
+      font-size: 2.3vw;
     }
 
     .foot-note{
       line-height: 2vh;
-      font-size: 2vw;
+      font-size: 1.8vw;
     }
     
     .officers-list{
@@ -387,7 +386,7 @@ table,th,td{
     }
     
     .detail-label{
-      font-size: 2vw;
+      font-size: 1.8vw;
       font-weight: 700;
       margin-bottom: 0.5vh;
       width: 20vw;
@@ -403,7 +402,7 @@ table,th,td{
     }
 
     .bill-time{
-      font-size: 2.2vw;
+      font-size: 2vw;
       margin-top: 0vh;
     }
     .print-wrapper{
@@ -417,7 +416,7 @@ table,th,td{
       }
     
       .d-table{
-        font-size: 2vw;
+        font-size: 1.8vw;
       }
 
       
