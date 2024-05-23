@@ -11,7 +11,8 @@ export const AddCompany = () => {
     phone: "",
     type: "",
     alias: "",
-    owner: ""
+    owner: "",
+    location: ""
   })
 
   const onUpdateForm = e => {
@@ -44,7 +45,8 @@ export const AddCompany = () => {
       phone: "",
       type: "",
       alias: "",
-      owner: ""
+      owner: "",
+      location: ""
     })
 
   }
@@ -68,6 +70,15 @@ export const AddCompany = () => {
           <div className='text-input'><input type="text" name='owner' value={form.owner} onChange={onUpdateForm} placeholder='Owners Name' /></div>
           <div className='text-input'><input type="text" name='tin' value={form.tin} onChange={onUpdateForm} placeholder='Valuation Number' /></div>
           <div className='text-input'><input type="text" name='phone' value={form.phone} onChange={onUpdateForm} placeholder='Phone' /></div>
+          <select name="location" value={form.location} onChange={onUpdateForm} id="" className='category-select'>
+            <option value="" disabled={true}>Location</option>
+            <option value="Bogoso">Bogoso</option>
+            <option value="Prestea">Prestea</option>
+            <option value="Huni-Valley">Huni-Valley</option>
+            <option value="Aboso">Aboso</option>
+            <option value="Damang">Damang</option>
+            <option value="Samahu">Samahu</option>
+          </select>
           {/* <div className='text-input'><input type="text" name='arrears' value={form.arrears} onChange={onUpdateForm} placeholder='Arrears' /></div> */}
           <div className='add-button' onClick={submit}>Add Organization</div>
         </div>
@@ -78,6 +89,15 @@ export const AddCompany = () => {
           <div className='text-input'><input type="text" name='name' value={form.name} onChange={onUpdateForm} placeholder='Full Name' /></div>
           <div className='text-input'><input type="text" name='tin' value={form.tin} onChange={onUpdateForm} placeholder='Valuation Number' /></div>
           <div className='text-input'><input type="text" name='phone' value={form.phone} onChange={onUpdateForm} placeholder='Phone' /></div>
+          <select name="location" value={form.location} onChange={onUpdateForm} id="" className='category-select'>
+            <option value="" disabled={true}>Location</option>
+            <option value="Bogoso">Bogoso</option>
+            <option value="Prestea">Prestea</option>
+            <option value="Huni-Valley">Huni-Valley</option>
+            <option value="Aboso">Aboso</option>
+            <option value="Damang">Damang</option>
+            <option value="Samahu">Samahu</option>
+          </select>
           {/* <div className='text-input'><input type="text" name='arrears' value={form.arrears} onChange={onUpdateForm} placeholder='Arrears' /></div> */}
           <div className='text-input'><input type="text" name='alias' value={form.alias} onChange={onUpdateForm} placeholder='Alias' /></div>
 

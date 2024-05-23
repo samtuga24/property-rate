@@ -209,9 +209,15 @@ input{
 .attn{
   font-size: 1.2vw;
 }
+.location{
+  font-size: 1.2vw;
+  position: absolute;
+  right: 5vw;
+}
 .law-section{
   font-size: 1.3vw;
   margin-top: 1vh;
+ 
 }
 .rate-header{
   font-size: 1.2vw;
@@ -336,6 +342,10 @@ table,th,td{
     .attn{
       font-size: 1.8vw;
     }
+
+    .location{
+      font-size: 1.8vw;
+    }
     .row-detail{
       height: 3vh;
     }
@@ -345,7 +355,7 @@ table,th,td{
     }
 
     .law-section{
-      font-size: 1.8vw;
+      font-size: 1.9vw;
     }
     .bill-header-1{
       margin-top: 0vh;

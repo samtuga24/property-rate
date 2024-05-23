@@ -45,7 +45,7 @@ export const Dashboard = () => {
         <div className='nav-wrapper'>
           <div className='nav-card-1' onClick={companyClick}>Add Organization</div>
           <div className='nav-card-1' onClick={propertyClick}>Add Property</div>
-          <div className='nav-card-2' onClick={arrearsClick}>Edit Arrears</div>
+          {/* <div className='nav-card-2' onClick={arrearsClick}>Edit Arrears</div> */}
           <div className='nav-card-3' onClick={billClick}>Bill</div>
         </div>
         <div className='dash-details'>

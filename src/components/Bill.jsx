@@ -7,6 +7,7 @@ import axios from 'axios'
 
 export const Bill = () => {
     const [comp, setComp] = useState();
+    const [location, setLocation] = useState();
     const [tin, setTin] = useState()
     const [bill, setBill] = useState()
     const [company, setCompany] = useState()
@@ -27,11 +28,9 @@ export const Bill = () => {
 
         axios.get(`http://localhost:8080/get-property/${tin}`)
             .then(response => {
-                console.log(response.data[0])
-                console.log(response.data[0].company)
-                console.log(response.data[0].company.id)
                 setComp(response.data[0].company.id)
                 setCompany(response.data[0].company.name)
+                setLocation(response.data[0].company.location)
                 setOwner(response.data[0].company.owner)
                 setPhone(response.data[0].rateableValue)
                 setAlias(response.data[0].company.alias)
@@ -63,6 +62,7 @@ console.log(phone)
     console.log(`http://localhost:8080/list-property/${comp}`)
     console.log(comp)
     console.log(bill)
+    console.log(location)
     console.log(ex)
     console.log(total)
     console.log(company)
@@ -118,14 +118,15 @@ console.log(phone)
 
 
                         <div className='print-details'>
+                            <div className='location'><i>Location:</i> {location}</div>
                             <div className='attn'> ATTN:  {type == 'ORGANIZATION' ? owner : company}</div>
                             <div className='rate-header'>PAYMENT OF PROPERTY RATE</div>
                             <div className='law-section'>
-                                Section 12 (3) (a), 144, 145 of the Local Government Act 2016 (Act 936) charges the District<br />
-                                Assemblies with the responsibility for the overall development of their districts. In accordance with<br />
-                                Section 146 2 (a) (b) of the Local Government Act, 2016 (Act 936), I write to inform you that your<br />
-                                property rate bills are ready online.<br />
-                                You are required to pay the amount stated below;
+                                Section 12 (3) (a), 144, 145 of the Local Government Act 2016 (Act 936) charges the District
+                                Assemblies with the responsibility for the overall development of their districts. In accordance with
+                                Section 146 2 (a) (b) of the Local Government Act, 2016 (Act 936), I write to inform you that your
+                                property rate bill is available.<br />
+                                You are required visit the Assembly's revenue office to pay the amount stated below;
                             </div>
                             
                                 <div className='row-detail'>
@@ -211,18 +212,18 @@ console.log(phone)
                                 The Assembly will follow the due process to recover payment due after the deadline has elapsed.<br />
                                 If you require any assistance, kindly contact the following scheduled Officers.</i><br />
                             <div className='officers-list'>
-                                1. Mr. Emmauel Gyan, Municipal Coordinating Director - 0243345726<br />
-                                2. Mr. Thomas Asare, Municipal Head Of Finance - 0242613441<br />
-                                3. Mr. Stephen K. Dankwah, Municipal Budget Analyst - 0242236691<br />
-                                4. Mr. Alhassan Modi, Revenue Head - 0243619310<br />
-                                5. Mr. Peter Sellasie Adjorlolo, Service Manager - 0507617267 / 0530186801<br />
+                                {/* 1. Mr. Emmauel Gyan, Municipal Coordinating Director - 0243345726<br />
+                                2. Mr. Thomas Asare, Municipal Head Of Finance - 0242613441<br /> */}
+                                1. Mr. Stephen K. Dankwah, Municipal Budget Analyst - 0242236691<br />
+                                2. Mr. Alhassan Modi, Revenue Head - 0243619310<br />
+                                3. Mr. Peter Sellasie Adjorlolo, Service Manager - 0507617267 / 0530186801<br />
                                 We count on your usual cooperation<br />
                                 Thank you.
                             </div>
                             <div className='director-container'>
                                 <div className='director-wrapper'>
                                     <div className='director-name'>EMMANUEL GYAN</div>
-                                    <div className='director-sign'><img src={sign} alt="" /></div>
+                                    {/* <div className='director-sign'><img src={sign} alt="" /></div> */}
                                     <div className='director-position'>(MUNICIPAL CO-ORD DIRECTOR)</div>
                                     <div className='director-position'><i>for:</i>MUNICIPAL CHIEF EXECUTIVE</div>
                                 </div>
