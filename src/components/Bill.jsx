@@ -139,17 +139,17 @@ console.log(phone)
                                 </div>
                                 <div className='row-detail'>
                                     <div className='detail-label'>Arrears</div>
-                                    <div className='detail'>GHS {Math.round(arrears *100)/100}</div>
+                                    <div className='detail'>GHS {arrears?.toFixed(2)}</div>
                                 </div>
 
                                 <div className='row-detail'>
                                     <div className='detail-label'>Current Bill:</div>
-                                    <div className='detail'>GHS {Math.round(total *100)/100}</div>
+                                    <div className='detail'>GHS {total?.toFixed(2)}</div>
                                 </div>
 
                                 <div className='row-detail'>
                                     <div className='detail-label'>Total Bill:</div>
-                                    <div className='detail'>GHS {Math.round((arrears + total) *100)/100}</div>
+                                    <div className='detail'>GHS {(arrears + total)?.toFixed(2)}</div>
                                 </div>
                             
                             {type == 'ORGANIZATION' ?
@@ -200,7 +200,7 @@ console.log(phone)
                                                 <td className='rate'>{items.rateableValue}</td>
                                                 <td className='rate'>{items.rate}</td>
                                                 {/* <td></td> */}
-                                                <td className='rate'>{items.billAmount}</td>
+                                                <td className='rate'>{(items.billAmount).toFixed(2)}</td>
                                             </tr>
                                         )
                                     })}
