@@ -21,7 +21,12 @@ export const Bill = () => {
     const [show, setShow] = useState(false)
     const [owner, setOwner] = useState()
     const [ex, setEx] = useState();
+    const [rateable, setRateable] = useState();
 
+    let ghanaCedi = new Intl.NumberFormat('en-GH', {
+        style: 'currency',
+        currency: 'GHS',
+    });
     const clickBill = () => {
         setHide(false)
         setShow(true)
@@ -45,6 +50,10 @@ export const Bill = () => {
         .then(response => { setTotal(response.data.reduce((num1, num2) => num1 + num2, 0)) })
         .catch((error) => console.log(error))
 
+        axios.get(`http://localhost:8080/get-rateable/${comp}`)
+        .then(response => { setRateable(response.data.reduce((num1, num2) => num1 + num2, 0)) })
+        .catch((error) => console.log(error))
+
         axios.get(`http://localhost:8080/get-arrears/${comp}`)
         .then(response => { setArrears(response.data.reduce((num1, num2) => num1 + num2, 0)) })
         .catch((error) => console.log(error))
@@ -55,18 +64,9 @@ export const Bill = () => {
         .catch((error) => console.log(error))
     },[comp])
 
-
-console.log(phone)
-
     const currentDate = new Date().toString().slice(0, 15);
     console.log(`http://localhost:8080/list-property/${comp}`)
-    console.log(comp)
-    console.log(bill)
-    console.log(location)
-    console.log(ex)
-    console.log(total)
-    console.log(company)
-    console.log(aliasLength)
+
     const [expand, setExpand] = useState(false);
     const myRef = useRef();
     const clickExpand = () => {
@@ -135,21 +135,21 @@ console.log(phone)
                                 </div>
                                 <div className='row-detail'>
                                     <div className='detail-label'>Property Value</div>
-                                    <div className='detail'>{phone}</div>
+                                    <div className='detail'>{ghanaCedi.format(rateable)}</div>
                                 </div>
                                 <div className='row-detail'>
                                     <div className='detail-label'>Arrears</div>
-                                    <div className='detail'>GHS {arrears?.toFixed(2)}</div>
+                                    <div className='detail'>{ghanaCedi.format(arrears)}</div>
                                 </div>
 
                                 <div className='row-detail'>
                                     <div className='detail-label'>Current Bill:</div>
-                                    <div className='detail'>GHS {total?.toFixed(2)}</div>
+                                    <div className='detail'> {ghanaCedi.format(total)}</div>
                                 </div>
 
                                 <div className='row-detail'>
                                     <div className='detail-label'>Total Bill:</div>
-                                    <div className='detail'>GHS {(arrears + total)?.toFixed(2)}</div>
+                                    <div className='detail'>{ghanaCedi.format((arrears + total))}</div>
                                 </div>
                             
                             {type == 'ORGANIZATION' ?
@@ -185,10 +185,10 @@ console.log(phone)
                                         <th>Category</th>
                                         {/* <th>Bill ID</th> */}
                                         {/* <th>Valuation Status</th> */}
-                                        <th>Rateable Value (GHS)</th>
+                                        <th>Rateable Value</th>
                                         <th>Rate</th>
                                         {/* <th>Amount Due (GHS)</th> */}
-                                        <th>Bill Amount (GHS)</th>
+                                        <th>Bill Amount</th>
                                     </tr>
                                     {ex.map((items, i) => {
                                         return (
@@ -197,10 +197,10 @@ console.log(phone)
                                                 <td className='print-table'>{items.category}</td>
                                                 {/* <td className='print-table'></td> */}
                                                 {/* <td></td> */}
-                                                <td className='rate'>{items.rateableValue}</td>
+                                                <td className='rate'>{ghanaCedi.format(items.rateableValue)}</td>
                                                 <td className='rate'>{items.rate}</td>
                                                 {/* <td></td> */}
-                                                <td className='rate'>{(items.billAmount).toFixed(2)}</td>
+                                                <td className='rate'>{ghanaCedi.format(items.billAmount)}</td>
                                             </tr>
                                         )
                                     })}
