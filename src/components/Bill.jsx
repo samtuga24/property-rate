@@ -121,7 +121,7 @@ export const Bill = () => {
                             <div className='attn'> ATTN:  {type == 'ORGANIZATION' ? owner : company}</div>
                             <div className='rate-header'>PAYMENT OF PROPERTY RATE</div>
                             <div className='law-section'>
-                                Section 12 (3) (a), 144, 145 of the Local Government Act 2016 (Act 936) charges the District
+                                Section 12 (3) (a), 144, 145 of the Local Governance Act 2016 (Act 936) charges the District
                                 Assemblies with the responsibility for the overall development of their districts. In accordance with
                                 Section 146 2 (a) (b) of the Local Government Act, 2016 (Act 936), I write to inform you that your
                                 property rate bill is available.<br />
