@@ -115,8 +115,7 @@ export const Bill = () => {
                                 <div className='bill-time'>{currentDate}</div>
                             </div>
                         </div>
-
-
+                        
                         <div className='print-details'>
                             <div className='location'><i>Location:</i> {location}</div>
                             <div className='attn'> ATTN:  {type == 'ORGANIZATION' ? owner : company}</div>

@@ -18,7 +18,7 @@ export const AddCompany = () => {
   const onUpdateForm = e => {
     const newFormState = {
       ...form,
-      [e.target.name]: e.target.value.toUpperCase()
+      [e.target.name]: e.target.value
     };
     submitForm(newFormState)
   }
@@ -54,6 +54,7 @@ export const AddCompany = () => {
 
 
   console.log(result)
+  console.log(form.location)
   return (
     <div className='add-company-container'>
       <div className='add-company-wrapper'>
@@ -72,14 +73,13 @@ export const AddCompany = () => {
           <div className='text-input'><input type="text" name='phone' value={form.phone} onChange={onUpdateForm} placeholder='Phone' /></div>
           <select name="location" value={form.location} onChange={onUpdateForm} id="" className='category-select'>
             <option value="" disabled={true}>Location</option>
-            <option value="Bogoso">Bogoso</option>
-            <option value="Prestea">Prestea</option>
-            <option value="Huni-Valley">Huni-Valley</option>
-            <option value="Aboso">Aboso</option>
-            <option value="Damang">Damang</option>
-            <option value="Samahu">Samahu</option>
+            <option value="Bogoso">BOGOSO</option>
+            <option value="Prestea">PRESTEA</option>
+            <option value="Huni-Valley">HUNI-VALLEY</option>
+            <option value="Aboso">ABOSO</option>
+            <option value="Damang">DAMANG</option>
+            <option value="Samahu">SAMAHU</option>
           </select>
-          {/* <div className='text-input'><input type="text" name='arrears' value={form.arrears} onChange={onUpdateForm} placeholder='Arrears' /></div> */}
           <div className='add-button' onClick={submit}>Add Organization</div>
         </div>
       }
@@ -91,14 +91,13 @@ export const AddCompany = () => {
           <div className='text-input'><input type="text" name='phone' value={form.phone} onChange={onUpdateForm} placeholder='Phone' /></div>
           <select name="location" value={form.location} onChange={onUpdateForm} id="" className='category-select'>
             <option value="" disabled={true}>Location</option>
-            <option value="Bogoso">Bogoso</option>
-            <option value="Prestea">Prestea</option>
-            <option value="Huni-Valley">Huni-Valley</option>
-            <option value="Aboso">Aboso</option>
-            <option value="Damang">Damang</option>
-            <option value="Samahu">Samahu</option>
+            <option value="Bogoso">BOGOSO</option>
+            <option value="Prestea">PRESTEA</option>
+            <option value="Huni-Valley">HUNI-VALLEY</option>
+            <option value="Aboso">ABOSO</option>
+            <option value="Damang">DAMANG</option>
+            <option value="Samahu">SAMAHU</option>
           </select>
-          {/* <div className='text-input'><input type="text" name='arrears' value={form.arrears} onChange={onUpdateForm} placeholder='Arrears' /></div> */}
           <div className='text-input'><input type="text" name='alias' value={form.alias} onChange={onUpdateForm} placeholder='Alias' /></div>
 
           <div className='add-button' onClick={submit}>Add Individual</div>
