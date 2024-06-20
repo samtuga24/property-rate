@@ -117,15 +117,15 @@ export const Bill = () => {
                         </div>
                         
                         <div className='print-details'>
-                            <div className='location'><i>Location:</i> {location}</div>
                             <div className='attn'> ATTN:  {type == 'ORGANIZATION' ? owner : company}</div>
+                            <div className='location'>{location}</div>
                             <div className='rate-header'>PAYMENT OF PROPERTY RATE</div>
                             <div className='law-section'>
                                 Section 12 (3) (a), 144, 145 of the Local Governance Act 2016 (Act 936) charges the District
                                 Assemblies with the responsibility for the overall development of their districts. In accordance with
                                 Section 146 2 (a) (b) of the Local Governance Act, 2016 (Act 936), I write to inform you that your
                                 property rate bill is available.<br />
-                                You are required visit the Assembly's revenue office to pay the amount stated below;
+                                You are required to visit the Assembly's revenue office to pay the amount stated below;
                             </div>
                             
                                 <div className='row-detail'>

@@ -211,8 +211,8 @@ input{
 }
 .location{
   font-size: 1.2vw;
-  position: absolute;
-  right: 5vw;
+  font-weight: 700;
+  margin-top: 2vh;
 }
 .law-section{
   font-size: 1.3vw;
