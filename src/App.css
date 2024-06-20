@@ -208,11 +208,13 @@ input{
 }
 .attn{
   font-size: 1.2vw;
+  font-weight: 700;
+  margin-top: -2vh;
 }
 .location{
   font-size: 1.2vw;
   font-weight: 700;
-  margin-top: 2vh;
+  margin-top: 1.5vh;
 }
 .law-section{
   font-size: 1.3vw;

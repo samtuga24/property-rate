@@ -118,7 +118,7 @@ export const Bill = () => {
                         
                         <div className='print-details'>
                             <div className='attn'> ATTN:  {type == 'ORGANIZATION' ? owner : company}</div>
-                            <div className='location'>{location.toUpperCase()}</div>
+                            <div className='location'>{location}</div>
                             <div className='rate-header'>PAYMENT OF PROPERTY RATE</div>
                             <div className='law-section'>
                                 Section 12 (3) (a), 144, 145 of the Local Governance Act 2016 (Act 936) charges the District
